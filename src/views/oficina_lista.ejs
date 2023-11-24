@@ -1,0 +1,36 @@
+<%- include("templates/head") %>
+<body>
+    <%- include("templates/navbar") %>
+    <div class="container mt-5">
+        <h1>Lista de Oficina</h1>
+        <a href="/agregar_oficina" class="btn btn-dark btn-floating m-1 bi bi-person-plus-fill"></a>
+        <a href="/buscar_oficina" class="btn btn-dark btn-floating m-1 bi bi-search"></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row bg-dark text-white p-2 mb-2 font-weight-bold">
+                        <div class="col-md-2 text-center">ID</div>
+                        <div class="col-md-2 text-center">Nombre</div>
+                        <div class="col-md-4 text-center">Acciones</div>
+                    </div>
+                    <% oficina_lista.forEach(element => { %>
+                        <div class="row bg-light text-dark p-2 mb-2">
+                            <div class="col-md-2 text-center">
+                                <%= element.id %>
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <%= element.denominacion %>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <a href="/editar_oficina/<%= element.id %>" class="btn btn-outline-dark bi bi-pencil-square"></a>
+                                <a href="/borrar_oficina/<%= element.id %>" class="btn btn-outline-danger bi bi-trash"></a>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include("templates/footer") %>
+</body>
+</html>

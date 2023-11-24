@@ -1,0 +1,22 @@
+<%- include("templates/head") %>
+<body>
+    <%- include("templates/navbar") %>
+    <div class="container mt-5">
+        <h1 class="text-center">Buscar Oficina</h1>
+        <form action="/resultados_oficina" method="post" class="mt-3">
+            <div class="row justify-content-center">
+                <!-- responsividad --> 
+                <div class="col-md-8 col-lg-6">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="keyword" placeholder="Buscar Oficina" aria-label="Buscar Oficina" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-dark" type="submit">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <%- include("templates/footer") %>
+</body>
+</html>

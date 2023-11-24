@@ -1,0 +1,31 @@
+<%- include("templates/head") %>
+<body>
+    <%- include("templates/navbar") %>
+    <div class="container mt-5">
+        <h1>Resultados</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row bg-dark text-white p-2 mb-2 font-weight-bold">
+                <div class="col-md-2 text-center">ID</div>
+                <div class="col-md-2 text-center">Nombre</div>
+                <div class="col-md-2 text-center">Email</div>
+                <div class="col-md-2 text-center">Oficina</div>
+                <div class="col-md-4 text-center">Acciones</div>
+            </div>
+
+            <% personas.forEach((element) => { %>
+                <div class="row border-bottom bg-light text-dark">
+                    <div class="col-md-2 text-center"><%= element.id %></div>
+                    <div class="col-md-2 text-center"><%= element.nombre %></div>
+                    <div class="col-md-2 text-center"><%= element.email %></div>
+                    <div class="col-md-2 text-center"><%= element.denominacion %></div>
+                    <div class="col-md-4 text-center">
+                        <a href="/editar/<%= element.id %>" class="btn btn-outline-dark bi bi-pencil-square "></a>
+                        <a href="/borrar/<%= element.id %>" class="btn btn-outline-danger bi bi-trash"></a>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    <%- include("templates/footer") %>
+    </div>
+</body>

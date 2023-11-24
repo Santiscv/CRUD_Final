@@ -1,0 +1,21 @@
+<%- include("templates/head") %>
+<body>
+    <%- include("templates/navbar") %>
+    <div class="container mt-5">
+        <h1 class="text-center">Agregar Oficina</h1>
+        <form action="/agregar_oficina" method="post" class="mt-3">
+            <div class="row justify-content-center">
+                <!-- responsividad -->
+                <div class="col-md-8 col-lg-6">
+                    <div class="form-group">
+                        <label for="denominacion">Denominación</label>
+                        <input type="text" class="form-control" id="denominacion" name="denominacion" placeholder="Denominación" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark bi bi-patch-check-fill mt-3"></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <%- include("templates/footer") %>
+</body>
+</html>

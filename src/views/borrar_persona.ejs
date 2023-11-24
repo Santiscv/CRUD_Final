@@ -1,0 +1,13 @@
+<%- include("templates/head") %>
+<body>
+    <%- include("templates/navbar") %>
+    <div class="container mt-5">
+        <h1>¿Desea confirmar la eliminación de esta Persona?</h1>
+        <form action="/borrar/<%= item.id %>" method="post">
+            <button type="submit" class="btn btn-dark bi bi-patch-check-fill mt-3"></button>
+
+        </form>
+    </div>
+<%- include("templates/footer") %>
+
+</body>
