@@ -1,5 +1,4 @@
-# Título del Proyecto
-CRUD FINAL.
+# CRUD FINAL.
 
 ### Instalación 🔧
 
